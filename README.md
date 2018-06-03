@@ -1,39 +1,41 @@
-# dev-sync
+# devsy
 
 Auto-sync projects in your dev folder across multiple computers.
 
 ### CLI Installation and Usage
 
 ```javascript
-npm install dev-sync -g
+npm install devsy -g
 ```
 
 Run this from your `dev` directory:
 
 ```javascript
-dev-sync
+devsy
 ```
 
 Works with `dev` directories structured like this:
 
 ```javascript
-/dev
-|-- /apps
-|   |-- /appYouMade
-|   |   |-- .git
-|   |   |-- src
-|   |   |-- index.js
-|   |   |-- package-lock.json
-|   |   |-- package.json
-|   |    -- README.md
-|    -- /anothaOne
- -- /cli
+dev
+├─┬ apps
+│ ├─┬ appYouMade
+│ │ ├── .git
+│ │ ├── src
+│ │ ├── app.js
+│ │ ├── package-lock.json
+│ │ ├── package.json
+│ │ └── README.md
+│ └─┬ anothaOne
+│   └── ...
+├── ext
+└── cli
 ```
 
 ### node.js Usage
 
 ```javascript
-require('dev-sync')('path/to/dev');
+await require('devsy')('path/to/dev');
 ```
 
 ### Donate!
