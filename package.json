@@ -1,0 +1,32 @@
+{
+  "author": "Quinton Ashley",
+  "bin": "bin/devsy",
+  "bugs": {
+    "url": "https://github.com/quinton-ashley/devsy/issues"
+  },
+  "description": "Auto-sync projects in your dev folder across multiple computers.",
+  "homepage": "https://github.com/quinton-ashley/devsy#readme",
+  "keywords": [
+    "cli",
+    "git",
+    "sync",
+    "projects"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "devsy",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quinton-ashley/devsy.git"
+  },
+  "scripts": {
+    "start": "node bin/devsy",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "version": "git add .",
+    "postversion": "git push && git push --tags && npm publish"
+  },
+  "version": "1.0.1",
+  "dependencies": {
+    "await-spawn": "^2.1.1"
+  }
+}

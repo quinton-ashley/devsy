@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+
+let devDir = process.argv.slice(2, 3)[0];
+if (!devDir) {
+  devDir = '.';
+}
+require('..')(devDir);
