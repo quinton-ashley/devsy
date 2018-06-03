@@ -4,6 +4,9 @@
   "bugs": {
     "url": "https://github.com/quinton-ashley/devsy/issues"
   },
+  "dependencies": {
+    "await-spawn": "^2.1.1"
+  },
   "description": "Auto-sync projects in your dev folder across multiple computers.",
   "homepage": "https://github.com/quinton-ashley/devsy#readme",
   "keywords": [
@@ -22,11 +25,8 @@
   "scripts": {
     "start": "node bin/devsy",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "version": "git add .",
+    "version": "git add -A",
     "postversion": "git push && git push --tags && npm publish"
   },
-  "version": "1.0.1",
-  "dependencies": {
-    "await-spawn": "^2.1.1"
-  }
+  "version": "1.0.0"
 }
