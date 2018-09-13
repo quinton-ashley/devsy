@@ -1,32 +1,35 @@
 {
-  "author": "Quinton Ashley",
-  "bin": "bin/devsy",
-  "bugs": {
-    "url": "https://github.com/quinton-ashley/devsy/issues"
-  },
-  "dependencies": {
-    "await-spawn": "^2.1.1"
-  },
-  "description": "Auto-sync projects in your dev folder across multiple computers.",
-  "homepage": "https://github.com/quinton-ashley/devsy#readme",
-  "keywords": [
-    "cli",
-    "git",
-    "sync",
-    "projects"
-  ],
-  "license": "MIT",
-  "main": "index.js",
-  "name": "devsy",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/quinton-ashley/devsy.git"
-  },
-  "scripts": {
-    "start": "node bin/devsy",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "version": "git add -A",
-    "postversion": "git push && git push --tags && npm publish"
-  },
-  "version": "1.0.1"
+	"author": "Quinton Ashley",
+	"bin": "bin/cli.js",
+	"bugs": {
+		"url": "https://github.com/quinton-ashley/devsy/issues"
+	},
+	"dependencies": {
+		"await-spawn": "^2.1.1",
+		"minimist": "^1.2.0"
+	},
+	"description": "Auto-sync projects in your dev folder across multiple computers.",
+	"homepage": "https://github.com/quinton-ashley/devsy#readme",
+	"keywords": [
+		"cli",
+		"git",
+		"sync",
+		"projects"
+	],
+	"license": "MIT",
+	"main": "index.js",
+	"name": "devsy",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/quinton-ashley/devsy.git"
+	},
+	"scripts": {
+		"start": "node bin/devsy",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"up-outdated": "npm install --save $(npm outdated | cut -d ' ' -f -1 | sed '1d' | sed 's/$/@*/')",
+		"v": "npm version patch --force",
+		"version": "git add -A",
+		"postversion": "git push && git push --tags && npm publish"
+	},
+	"version": "1.0.2"
 }
